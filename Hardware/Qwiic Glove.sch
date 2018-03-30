@@ -158,49 +158,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S" xrefpart="/%S.%C%R">
 <libraries>
-<library name="Andy">
-<packages>
-<package name="FLEX_SENSOR">
-<smd name="P$1" x="-1.27" y="0" dx="1.27" dy="7.62" layer="1"/>
-<smd name="P$2" x="1.27" y="0" dx="1.27" dy="7.62" layer="1" rot="R180"/>
-</package>
-</packages>
-<symbols>
-<symbol name="FLEX_SENSOR">
-<wire x1="-7.62" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="0" x2="-4.318" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-4.318" y1="1.27" x2="-3.556" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-3.556" y1="-1.524" x2="-2.794" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-2.794" y1="1.27" x2="-2.032" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-2.032" y1="-1.524" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-0.508" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-0.508" y1="-1.524" x2="0.254" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0.254" y1="1.27" x2="1.016" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="1.016" y1="-1.524" x2="1.778" y2="0" width="0.254" layer="94"/>
-<wire x1="1.778" y1="0" x2="4.318" y2="0" width="0.254" layer="94"/>
-<pin name="P$1" x="-10.16" y="0" length="middle"/>
-<pin name="P$2" x="7.62" y="0" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="FLEX_SENSOR">
-<gates>
-<gate name="G$1" symbol="FLEX_SENSOR" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="FLEX_SENSOR">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Aesthetics&lt;/h3&gt;
 This library contiains non-functional items such as logos, build/ordering notes, frame blocks, etc. 
@@ -19810,6 +19767,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
+<package name="FLEX_SENSOR">
+<description>&lt;h3&gt;Spectra Symbol Flex Sensor (2.2", 4.5") - A flexible resistor that changes its resistance as it bends.&lt;/h3&gt;
+&lt;p&gt;A footpring for the 2.2" and 4.5" flex sensors that allows them to be attached to PCB for more durabiility&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/8606”&gt;4.5" Flex Sensor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/10264”&gt;2.2" Flex Sensor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="-1.27" y="0" dx="1.27" dy="7.62" layer="1"/>
+<smd name="P$2" x="1.27" y="0" dx="1.27" dy="7.62" layer="1" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -20103,6 +20070,41 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="RES-07856"/>
 <attribute name="VALUE" value="1k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FLEX_SENSOR" prefix="R">
+<description>&lt;h3&gt;Spectra Symbol Flex Sensor (2.2", 4.5") - A flexible resistor that changes its resistance as it bends.&lt;/h3&gt;
+&lt;p&gt;A footpring for the 2.2" and 4.5" flex sensors that allows them to be attached to PCB for more durabiility&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/8606”&gt;4.5" Flex Sensor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/10264”&gt;2.2" Flex Sensor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-4.5&quot;" package="FLEX_SENSOR">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-13078" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-2.2&quot;" package="FLEX_SENSOR">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-10225" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -22071,11 +22073,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </classes>
 <parts>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
-<part name="U$3" library="Andy" deviceset="FLEX_SENSOR" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="100KOHM" device="-0603-1/10W-1%" value="100k"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="U$4" library="Andy" deviceset="FLEX_SENSOR" device=""/>
 <part name="R4" library="SparkFun-Resistors" deviceset="100KOHM" device="-0603-1/10W-1%" value="100k"/>
 <part name="U4" library="SparkFun-IC-Amplifiers" deviceset="LMV358" device="SOIC" value="LMV358"/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
@@ -22117,6 +22117,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R5" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
+<part name="R6" library="SparkFun-Resistors" deviceset="FLEX_SENSOR" device="-4.5&quot;"/>
+<part name="R7" library="SparkFun-Resistors" deviceset="FLEX_SENSOR" device="-4.5&quot;"/>
 </parts>
 <sheets>
 <sheet>
@@ -22158,25 +22160,25 @@ selectable I2C addresses</text>
 <text x="132.08" y="120.65" size="1.27" layer="94" font="vector" align="center">VCC</text>
 <text x="132.08" y="118.11" size="1.27" layer="94" font="vector" align="center">SDA</text>
 <text x="132.08" y="115.57" size="1.27" layer="94" font="vector" align="center">SCL</text>
+<text x="68.58" y="165.1" size="1.778" layer="97" font="vector">VCC Range: 2.7V-5.5V</text>
+<text x="50.8" y="48.26" size="1.778" layer="97" font="vector">Clear JP1 to disconnect I2C jumpers.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
-<instance part="U$3" gate="G$1" x="193.04" y="127" rot="R90"/>
 <instance part="R3" gate="G$1" x="193.04" y="106.68" rot="R90"/>
-<instance part="SUPPLY3" gate="G$1" x="193.04" y="137.16"/>
+<instance part="SUPPLY3" gate="G$1" x="193.04" y="129.54"/>
 <instance part="GND3" gate="1" x="193.04" y="96.52"/>
-<instance part="U$4" gate="G$1" x="154.94" y="127" rot="R90"/>
 <instance part="R4" gate="G$1" x="154.94" y="106.68" rot="R90"/>
 <instance part="U4" gate="G1" x="170.18" y="116.84"/>
-<instance part="SUPPLY4" gate="G$1" x="154.94" y="137.16"/>
+<instance part="SUPPLY4" gate="G$1" x="154.94" y="129.54"/>
 <instance part="GND4" gate="1" x="154.94" y="96.52"/>
 <instance part="GND5" gate="1" x="76.2" y="5.08"/>
 <instance part="SUPPLY5" gate="G$1" x="76.2" y="25.4"/>
 <instance part="U4" gate="G2" x="208.28" y="116.84"/>
 <instance part="U4" gate="G3" x="236.22" y="116.84"/>
-<instance part="GND6" gate="1" x="236.22" y="106.68"/>
-<instance part="SUPPLY6" gate="G$1" x="236.22" y="124.46"/>
+<instance part="GND6" gate="1" x="236.22" y="104.14"/>
+<instance part="SUPPLY6" gate="G$1" x="236.22" y="127"/>
 <instance part="J1" gate="G$1" x="66.04" y="15.24"/>
 <instance part="GND1" gate="1" x="12.7" y="63.5"/>
 <instance part="C1" gate="G$1" x="12.7" y="71.12"/>
@@ -22184,19 +22186,19 @@ selectable I2C addresses</text>
 <instance part="R1" gate="G$1" x="68.58" y="63.5" rot="R90"/>
 <instance part="R2" gate="G$1" x="83.82" y="63.5" rot="R90"/>
 <instance part="JP1" gate="G$1" x="76.2" y="71.12" smashed="yes" rot="R270">
-<attribute name="NAME" x="76.581" y="68.58" size="1.778" layer="95" font="vector" rot="R270"/>
+<attribute name="NAME" x="73.66" y="66.421" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="SUPPLY2" gate="G$1" x="76.2" y="78.74"/>
 <instance part="GND2" gate="1" x="48.26" y="5.08"/>
 <instance part="SUPPLY7" gate="G$1" x="48.26" y="25.4"/>
 <instance part="J2" gate="G$1" x="38.1" y="15.24"/>
 <instance part="JP2" gate="G$1" x="111.76" y="114.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="112.141" y="111.76" size="1.778" layer="95" font="vector" rot="R270"/>
+<attribute name="NAME" x="109.22" y="109.601" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="SUPPLY8" gate="G$1" x="104.14" y="132.08"/>
 <instance part="GND7" gate="1" x="104.14" y="109.22"/>
 <instance part="JP3" gate="G$1" x="111.76" y="129.54" smashed="yes" rot="R90">
-<attribute name="NAME" x="111.379" y="132.08" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="NAME" x="114.3" y="134.239" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="LOGO1" gate="G$1" x="157.48" y="38.1"/>
 <instance part="LOGO2" gate="G$1" x="231.14" y="50.8"/>
@@ -22216,6 +22218,8 @@ selectable I2C addresses</text>
 <instance part="R5" gate="G$1" x="30.48" y="63.5" rot="R90"/>
 <instance part="GND10" gate="1" x="30.48" y="53.34"/>
 <instance part="SUPPLY11" gate="G$1" x="30.48" y="81.28"/>
+<instance part="R6" gate="G$1" x="154.94" y="121.92" rot="R90"/>
+<instance part="R7" gate="G$1" x="193.04" y="121.92" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -22241,18 +22245,19 @@ selectable I2C addresses</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="P$2"/>
 <pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
-<wire x1="193.04" y1="137.16" x2="193.04" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="129.54" x2="193.04" y2="127" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="P$2"/>
 <pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
-<wire x1="154.94" y1="137.16" x2="154.94" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="129.54" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G3" pin="P$V+"/>
 <pinref part="SUPPLY6" gate="G$1" pin="VCC"/>
+<wire x1="236.22" y1="127" x2="236.22" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
@@ -22319,6 +22324,7 @@ selectable I2C addresses</text>
 <segment>
 <pinref part="U4" gate="G3" pin="P$V-"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="236.22" y1="106.68" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="12.7" y1="68.58" x2="12.7" y2="66.04" width="0.1524" layer="91"/>
@@ -22356,24 +22362,24 @@ selectable I2C addresses</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="P$1"/>
 <wire x1="200.66" y1="114.3" x2="193.04" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="114.3" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="114.3" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
 <junction x="193.04" y="114.3"/>
 <pinref part="U4" gate="G2" pin="+IN"/>
+<pinref part="R7" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="U4" gate="G1" pin="+IN"/>
-<pinref part="U$4" gate="G$1" pin="P$1"/>
 <wire x1="162.56" y1="114.3" x2="154.94" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="114.3" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="114.3" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
 <junction x="154.94" y="114.3"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="A1" class="0">
