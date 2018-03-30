@@ -22218,8 +22218,14 @@ selectable I2C addresses</text>
 <instance part="R5" gate="G$1" x="30.48" y="63.5" rot="R90"/>
 <instance part="GND10" gate="1" x="30.48" y="53.34"/>
 <instance part="SUPPLY11" gate="G$1" x="30.48" y="81.28"/>
-<instance part="R6" gate="G$1" x="154.94" y="121.92" rot="R90"/>
-<instance part="R7" gate="G$1" x="193.04" y="121.92" rot="R90"/>
+<instance part="R6" gate="G$1" x="154.94" y="121.92" smashed="yes" rot="R90">
+<attribute name="NAME" x="153.416" y="121.92" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="156.464" y="127" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R7" gate="G$1" x="193.04" y="121.92" smashed="yes" rot="R90">
+<attribute name="NAME" x="191.516" y="121.92" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="194.564" y="127" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
