@@ -38,7 +38,7 @@
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
@@ -1667,13 +1667,20 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="SMT-JUMPER_3_2-NC_PASTE_NO-SILK">
+<package name="SMT-JUMPER_3_2-NC_TRACE_NO-SILK">
+<smd name="1" x="-1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="3" x="1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
 <text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-<rectangle x1="-1.651" y1="-1.1176" x2="1.651" y2="1.1176" layer="31"/>
-<smd name="1" x="-0.8128" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="2" x="0" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<smd name="3" x="0.8128" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<polygon width="0.127" layer="29">
+<vertex x="-0.6985" y="0.127"/>
+<vertex x="0.6985" y="0.127"/>
+<vertex x="0.6985" y="-0.127"/>
+<vertex x="-0.6985" y="-0.127"/>
+</polygon>
+<rectangle x1="0.3048" y1="-0.127" x2="0.7112" y2="0.127" layer="1"/>
+<rectangle x1="-0.7112" y1="-0.127" x2="-0.3048" y2="0.127" layer="1"/>
 </package>
 <package name="SMT-JUMPER_3_1-NC_TRACE_NO-SILK">
 <smd name="1" x="-1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
@@ -4229,7 +4236,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R2" library="SparkFun-Resistors" package="0603" value="4.7k" x="7.62" y="22.86" rot="R270">
 <attribute name="PROD_ID" value="RES-07857" x="7.62" y="22.86" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="JP1" library="SparkFun-Jumpers" package="SMT-JUMPER_3_2-NC_PASTE_NO-SILK" value="JUMPER-SMT_3_2-NC_PASTE_NO-SILK" x="12.7" y="13.335"/>
+<element name="JP1" library="SparkFun-Jumpers" package="SMT-JUMPER_3_2-NC_TRACE_NO-SILK" value="JUMPER-SMT_3_2-NC_TRACE_NO-SILK" x="12.7" y="13.335"/>
 <element name="J2" library="SparkFun-Connectors" package="1X04_1MM_RA" value="" x="12.7" y="5.08">
 <attribute name="PROD_ID" value="CONN-13694" x="3.81" y="15.24" size="1.778" layer="27" display="off"/>
 </element>
@@ -4272,7 +4279,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="U$4" library="Labels" package="GND-TEXT-03" value="" x="24.257" y="20.955" rot="MR90"/>
 <element name="U$12" library="buzzard_labels (3)" package="SDA0" value="" x="20.193" y="20.955" rot="MR90"/>
 <element name="U$13" library="buzzard_labels (4)" package="SCL2" value="" x="20.193" y="18.288" rot="MR90"/>
-<element name="U$15" library="Labels" package="I2C-()" value="" x="14.732" y="11.303" rot="R90"/>
+<element name="U$15" library="Labels" package="I2C-()" value="" x="15.113" y="11.303" rot="R90"/>
 <element name="TP1" library="SparkFun-Connectors" package="PAD.03X.03" value="TEST-POINT3" x="10.16" y="10.16" rot="MR0"/>
 <element name="TP2" library="SparkFun-Connectors" package="PAD.03X.03" value="TEST-POINT3" x="7.62" y="10.16" rot="MR0"/>
 <element name="U$14" library="buzzard_labels (5)" package="QWIIC_FLEX_GLOVE0" value="" x="24.384" y="13.97" rot="MR0"/>
@@ -4382,7 +4389,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <vertex x="25.4" y="24.13"/>
 </polygon>
 <contactref element="J2" pad="1"/>
-<via x="16.129" y="11.811" extent="1-16" drill="0.381"/>
+<via x="16.51" y="11.938" extent="1-16" drill="0.381"/>
 <via x="2.54" y="8.636" extent="1-16" drill="0.381"/>
 <via x="1.27" y="17.78" extent="1-16" drill="0.381"/>
 <via x="21.209" y="17.78" extent="1-16" drill="0.381"/>
@@ -4524,7 +4531,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$7">
 <contactref element="JP1" pad="1"/>
 <contactref element="R2" pad="2"/>
-<wire x1="11.8872" y1="13.335" x2="9.525" y2="13.335" width="0.2032" layer="1"/>
+<wire x1="11.684" y1="13.335" x2="9.525" y2="13.335" width="0.2032" layer="1"/>
 <wire x1="9.525" y1="13.335" x2="8.382" y2="14.478" width="0.2032" layer="1"/>
 <wire x1="8.382" y1="14.478" x2="5.969" y2="14.478" width="0.2032" layer="1"/>
 <wire x1="5.969" y1="14.478" x2="5.588" y2="14.859" width="0.2032" layer="1"/>
@@ -4535,7 +4542,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$8">
 <contactref element="JP1" pad="3"/>
 <contactref element="R1" pad="2"/>
-<wire x1="13.5128" y1="13.335" x2="15.875" y2="13.335" width="0.2032" layer="1"/>
+<wire x1="13.716" y1="13.335" x2="15.875" y2="13.335" width="0.2032" layer="1"/>
 <wire x1="15.875" y1="13.335" x2="17.018" y2="14.478" width="0.2032" layer="1"/>
 <wire x1="17.018" y1="14.478" x2="19.431" y2="14.478" width="0.2032" layer="1"/>
 <wire x1="19.431" y1="14.478" x2="19.812" y2="14.859" width="0.2032" layer="1"/>
