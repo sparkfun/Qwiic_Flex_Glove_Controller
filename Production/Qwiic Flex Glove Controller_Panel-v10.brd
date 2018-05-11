@@ -13184,7 +13184,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="238.252" y1="50.038" x2="238.252" y2="53.086" width="0.4064" layer="1"/>
 <wire x1="238.252" y1="60.452" x2="238.252" y2="53.086" width="0.4064" layer="1"/>
 <contactref element="R126" pad="P$1"/>
-<wire x1="215.392" y1="53.086" x2="215.431" y2="54.317" width="0" layer="19" extent="1-1"/>
+<wire x1="215.431" y1="54.317" x2="215.392" y2="53.086" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND17">
 <contactref element="R120" pad="1"/>
