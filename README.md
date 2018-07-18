@@ -21,7 +21,7 @@ Documentation
 
 Product Versions
 ----------------
-* [SEN-14666](part URL)- Basic part and short description here
+* [SEN-14666](https://www.sparkfun.com/products/14666)- The SparkFun Qwiic Flex Glove Controller allows you to incorporate flex sensors into a glove to control lighting, sound, and other effects making it perfect for wearable and e-textile applications. All communication is enacted exclusively via I2C, utilizing our handy Qwiic system. 
 
 License Information
 -------------------
